@@ -1,0 +1,13 @@
+==textile4j==
+This is Textile
+A Humane Web Text Generator... for Java
+
+==Origins==
+Textile was created by Dean Cameron Allen of textism.com and creator of FAVRD, a highly popular favorite tweet aggregator/community.
+
+Textile4j was created by Mark Lussier (intabulas) in 2003 as a plugin to the Java blogging platform blojsom.
+
+==Project Purpose==
+This repos is the port of Mark's library to a Maven build. It will also serve is the new repository of record for continuing development and fixes to the library.
+
+The repos will also be the release point for syncing to Maven Central by Sonatype's OSSRH forge at oss.sonatype.org.

@@ -1,0 +1,59 @@
+
+Block modifier syntax:
+
+Header: hn.
+Paragraphs beginning with 'hn. ' (where n is 1-6) are wrapped in header tags.
+Example: <h1>Text</h1>
+
+Header with CSS class: hn(class).
+Paragraphs beginning with 'hn(class). ' receive a CSS class attribute.
+Example: <h1 class="class">Text</h1>
+
+Paragraph: p. (applied by default)
+Paragraphs beginning with 'p. ' are wrapped in paragraph tags.
+Example: <p>Text</p>
+
+Paragraph with CSS class: p(class).
+Paragraphs beginning with 'p(class). ' receive a CSS class attribute.
+Example: <p class="class">Text</p>
+
+Blockquote: bq.
+Paragraphs beginning with 'bq. ' are wrapped in block quote tags.
+Example: <blockquote>Text</blockquote>
+
+Blockquote with citation: bq(citeurl).
+Paragraphs beginning with 'bq(citeurl). ' recieve a citation attribute.
+Example: <blockquote cite="citeurl">Text</blockquote>
+
+Numeric list: #
+Consecutive paragraphs beginning with # are wrapped in ordered list tags.
+Example: <ol><li>ordered list</li></ol>
+
+Bulleted list: *
+Consecutive paragraphs beginning with * are wrapped in unordered list tags.
+Example: <ul><li>unordered list</li></ul>
+
+
+Phrase modifier syntax:
+
+_emphasis_             <em>emphasis</em>
+__italic__             <i>italic</i>
+*strong*               <strong>strong</strong>
+**bold**               <b>bold</b>
+??citation??           <cite>citation</cite>
+-deleted text-         <del>deleted</del>
++inserted text+        <ins>inserted</ins>
+^superscript^          <sup>superscript</sup>
+~subscript~            <sub>subscript</sub>
+@code@                 <code>computer code</code>
+
+==notextile==          leave text alone (do not format)
+
+"linktext":url         <a href="url">linktext</a>
+"linktext(title)":url  <a href="url" title="title">linktext</a>
+
+!imageurl!             <img src="imageurl">
+!imageurl(alt text)!   <img src="imageurl" alt="alt text" />
+!imageurl!:linkurl     <a href="linkurl"><img src="imageurl" /></a>
+
+ABC(Always Be Closing) <acronym title="Always Be Closing">ABC</acronym>
