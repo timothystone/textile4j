@@ -379,7 +379,7 @@ public class TextileTest extends TestCase {
     }
 
     public void testLinksSyntax40() {
-        String in = "This is a \"link\":http://example.com/?foo=bar#a1 .";
+        String in = "This is a \"link\":http://example.com/?foo=bar#a1.";
         String out = "\t<p>This is a <a href=\"http://example.com/?foo=bar#a1\" title=\"\">link</a>.</p>";
         assertEquals(out, textile.process(in));
     }

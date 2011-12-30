@@ -94,9 +94,9 @@
         </mailingList>
     </mailingLists>
     <scm>
-        <connection>scm:git:git://github.com/timothystone/textile4j</connection>
-        <developerConnection>scm:git:https://github.com/timothystone/textile4j/</developerConnection>
-        <url>http://github.com/timothystone/textile4j</url>
+        <connection>scm:git:git@github.com:timothystone/textile4j.git</connection>
+        <developerConnection>scm:git:git@github.com:timothystone/textile4j.git</developerConnection>
+        <url>git@github.com:timothystone/textile4j.git</url>
     </scm>
     <distributionManagement>
         <snapshotRepository>
@@ -126,15 +126,12 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
-                        <configuration>
-                            <tagBase>https://blojsom.svn.sourceforge.net/svnroot/blojsom/</tagBase>
-                            <mavenExecutorId>forked-path</mavenExecutorId>
-                        </configuration>
+                        <version>2.2.2</version>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.0</version>
+                        <version>1.4</version>
                         <executions>
                             <execution>
                                 <goals>

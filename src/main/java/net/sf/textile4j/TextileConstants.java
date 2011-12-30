@@ -71,8 +71,8 @@ public interface TextileConstants {
     public static final String EXP_IMAGE_WITH_HREF_QTAG_MATCH = "(<img.+ \\/>):(\\S+)";
     public static final String EXP_IMAGE_WITH_HREF_QTAG_REPLACE = "<a href=\"$2\">$1</a>";
 
-    public static final String EXP_HREF_QTAG_MATCH = "\"([^\"\\(]+)\\s?(\\(([^\\)]+)\\))?\":(\\S+)(\\/?)(\\.)?([^\\w\\s\\/;]|[1-9]*?)(\\s|$)";
-    public static final String EXP_HREF_QTAG_REPLACE = "<a href=\\\"$4\\\" title=\\\"$3\\\">$1</a>";
+    public static final String EXP_HREF_QTAG_MATCH = "(^|(?<=[\\s>.(])|[{\\[])\"((?:(?:\\([^)]+\\))|(?:\\{[^}]+\\})|(?:\\[[^]]+\\])|(?:<(?!>)|(?<!<)>|<>|=|[()]+(?! )))*)([^\"]+?)(?:\\(([^)]+?)\\)(?=\"))?\":([\\w\"$_.+!*'(),\";/?:@=&%#{}|^~\\[\\]`-]+?)(/)?([^\\w/;]*?)([]}]|(?=\\s|$|\\)))";
+    public static final String EXP_HREF_QTAG_REPLACE = "<a href=\\\"$5$6\\\" title=\\\"$4\\\">$3</a>$7";
 
 
     public static final String[] EXP_PHRASE_MODIFIER_SOURCETAGS = {"\\*\\*", "\\*", "\\?\\?", "\\-", "\\+", "~", "@"};
@@ -97,7 +97,7 @@ public interface TextileConstants {
     public static final String EXP_DOUBLE_CLOSING = "([^\\']*)\\\"([^\\\"]*)";
     public static final String EXP_DOUBLE_OPENING = "\"";
     public static final String EXP_ELLIPSES = "\\b( )?\\.{3}";
-    public static final String EXP_3UPPER_ACCRONYM = "\\b([A-Z][A-Z0-9]{2,})\\b(\\(([^\\)]+)\\))";
+    public static final String EXP_3UPPER_ACRONYM = "\\b([A-Z][A-Z0-9]{2,})\\b(\\(([^\\)]+)\\))";
     public static final String EXP_3UPPERCASE_CAPS = "(^|[^\"][>\\s])([A-Z][A-Z0-9 ]{2,})([^<a-z0-9]|$)";
     public static final String EXP_EM_DASH = "\\s?--\\s?";
     public static final String EXP_EN_DASH = "\\s-\\s";
@@ -129,7 +129,7 @@ public interface TextileConstants {
     public static final String EXP_ENDPRESERVE = "</(code|pre|kbd|notextile)>";
 
     public static final String EXP_FORCESLINEBREAKS = "(\\S)(_*)([:punct:]*) *\\n([^#*\\s])";
-    public static final String REPLACE_FORCESLINEBREAK = "$1$2$3<br />$4";
+    public static final String REPLACE_FORCESLINEBREAK = "$1$2$3<br>$4";
 
 
     public static final String EXP_BULLETED_LIST = "^\\s?\\*\\s(.*)$";

@@ -169,7 +169,7 @@ public class Textile implements TextileConstants {
          * small problem with double quotes at the end of a string
          */
         content = content.replaceAll(EXP_EOL_DBL_QUOTES, " ");
-        content = content.replaceAll(EXP_EOL_FULL_STOP, " .");
+        content = content.replaceAll(EXP_EOL_FULL_STOP, ".");
 
 
         String[] glyphMatches = {EXP_SINGLE_CLOSING,
@@ -177,7 +177,7 @@ public class Textile implements TextileConstants {
                                  EXP_DOUBLE_CLOSING,
                                  EXP_DOUBLE_OPENING,
                                  EXP_ELLIPSES,
-                                 EXP_3UPPER_ACCRONYM,
+                                 EXP_3UPPER_ACRONYM,
                                  EXP_3UPPERCASE_CAPS,
                                  EXP_EM_DASH,
                                  EXP_EN_DASH,
@@ -250,7 +250,7 @@ public class Textile implements TextileConstants {
         content = content.replaceAll(EXP_FORCESLINEBREAKS, REPLACE_FORCESLINEBREAK);
 
         //# might be a problem with lists
-        content = replace(content, "l><br />", "l>\n");
+        content = replace(content, "l><br>", "l>\n");
 
 
         String[] blockMatches = {EXP_BULLETED_LIST,
@@ -300,7 +300,7 @@ public class Textile implements TextileConstants {
                 //# kill any br tags that slipped in earlier
                 if (inpre) {
                     line = replace(line, "<br />", "\n");
-                    line = replace(line, "<br/>", "\n");
+                    line = replace(line, "<br>", "\n");
                 }
                 //# matches back on after </pre>
                 if (line.toLowerCase().indexOf("</pre>") > -1) {
@@ -353,7 +353,7 @@ public class Textile implements TextileConstants {
         content = replace(content, "x%x%", "&#38;");
 
         //# Newline linebreaks, just for markup tidiness
-        content = replace(content, "<br />", "<br />\n");
+        content = replace(content, "<br>", "<br>\n");
 
 
         return content;
